@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "avenirbook";
+  src: url("avenir_book-webfont.woff2") format("woff2"),
+    url("avenir_book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenirblack";
+  src: url("avenir_black-webfont.woff2") format("woff2"),
+    url("avenir_black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenirheavy";
+  src: url("avenir_heavy-webfont.woff2") format("woff2"),
+    url("avenir_heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_regularregular";
+  src: url("avenir_regular-webfont.woff2") format("woff2"),
+    url("avenir_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

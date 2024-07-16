@@ -1,0 +1,387 @@
+@import './fonts.css';
+body {
+  font-family: "avenirbook";
+  background-color: #ffffff;
+  color: #424040;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+p {
+  margin: 0 0 15px;
+  font-size: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 3.375rem;
+  font-family: "avenirblack";
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.938rem;
+  font-family: "avenirheavy";
+  line-height: 2.2rem;
+  color: #E9222B;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1.313rem;
+  margin-bottom: 1rem;
+  font-family: "avenirheavy";
+}
+
+a {
+  color: #424040;
+}
+
+.btn {
+  display: inline-flex;
+  text-decoration: none;
+  background-color: #E9222B;
+  line-height: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.65rem;
+  color: #ffffff;
+  border-radius: 30px;
+  font-family: "avenirbook";
+  font-size: 1.125rem;
+  transition: all ease-in-out 200ms;
+}
+.btn:hover {
+  background-color: #d31720;
+  box-shadow: 0 3px 5px rgba(32, 32, 32, 0.25);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.base-color {
+  color: #424040;
+}
+
+.font-heavy {
+  font-family: "avenirblack";
+}
+
+.font-normal {
+  font-family: "avenirbook";
+}
+
+.highlight {
+  color: #E9222B;
+  font-family: "avenirheavy";
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 60px;
+  margin: auto;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.w-full {
+  width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+nav .logo img {
+  max-width: 315px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+nav ul li.active a {
+  color: #E9222B;
+  font-family: "avenirheavy";
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 0.25rem;
+  display: block;
+}
+nav ul li a:hover {
+  color: #E9222B;
+  transition: all ease-in-out 200ms;
+}
+nav ul li:last-child a {
+  background-color: #E9222B;
+  color: #ffffff;
+  padding: 0.625rem 1.15rem;
+  border-radius: 30px;
+  transition: all ease-in-out 200ms;
+}
+nav ul li:last-child a:hover {
+  background-color: #d31720;
+  box-shadow: 0 3px 5px rgba(32, 32, 32, 0.25);
+}
+
+.heading {
+  position: relative;
+}
+
+.heading-border-left {
+  margin-bottom: 3rem;
+  padding: 5px 0 0 30px;
+}
+.heading-border-left::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 8px;
+  height: 65px;
+  background-color: #E9222B;
+}
+
+ul {
+  padding: 1rem;
+}
+
+section {
+  position: relative;
+  margin: 90px 0;
+}
+section ul {
+  font-family: "avenirheavy";
+  margin-bottom: 1rem;
+}
+section ul li {
+  line-height: 1.78rem;
+}
+
+.flex-2-set {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4rem;
+  align-items: flex-start;
+  width: 100%;
+}
+.flex-2-set.gap-0 {
+  gap: 0;
+}
+
+.description {
+  flex: 1;
+}
+
+.personality-program {
+  padding-top: 1.75rem;
+}
+
+.glide__arrow {
+  color: #ffffff;
+  cursor: pointer !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.glide img {
+  cursor: default !important;
+}
+
+.img-shadow-red {
+  position: relative;
+}
+.img-shadow-red:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: -4%;
+  height: 109%;
+  background-color: #E9222B;
+  width: 88%;
+  z-index: -1;
+  border-radius: 10px;
+}
+.img-shadow-red img {
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.tab-menu {
+  display: flex;
+}
+.tab-menu button {
+  cursor: pointer;
+}
+
+.program-categories {
+  background-color: #F2F2F2;
+  z-index: 1;
+}
+.program-categories::after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #ffffff;
+  z-index: -1;
+}
+.program-categories .program-description-container {
+  flex: 1;
+  padding: 2.5rem 0 1.5rem 0;
+}
+.program-categories .program-desc-wrapper {
+  box-shadow: 0 4px 10px 1px rgba(32, 32, 32, 0.2);
+  background-color: #ffffff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+.program-categories .program-tab-container {
+  padding: 0 1.25rem 0 4rem;
+}
+
+.cta-inquire-button {
+  margin-bottom: 2.5rem;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.aside-tab-menu {
+  background-color: #424040;
+  height: 100%;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 340px;
+}
+.aside-tab-menu h3 {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 1.35rem;
+  padding-bottom: 1rem;
+}
+.aside-tab-menu .tab-menu button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  text-align: left;
+  color: #ffffff;
+  padding: 0 1.45rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 68px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.aside-tab-menu .tab-menu button.active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: calc(100% + 57px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #E9222B;
+  z-index: -1;
+  box-shadow: 0 3px 5px rgba(32, 32, 32, 0.25);
+  border-radius: 4px;
+}
+.aside-tab-menu .tab-menu button.active h5 {
+  font-family: "avenirheavy";
+}
+.aside-tab-menu .tab-menu button h5 {
+  margin: 0;
+  font-family: "avenirbook";
+}
+.aside-tab-menu .tab-menu-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.two-col-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.customer-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  pointer-events: none;
+}
+.customer-slider .slider-list {
+  display: flex;
+  transition: transform 0.5s ease;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.customer-slider .slider-item {
+  flex: 1 0 33.3333%; /* 100% / 3 images */
+}
+.customer-slider .slider-item img {
+  width: 100%;
+  display: block;
+}/*# sourceMappingURL=main.css.map */

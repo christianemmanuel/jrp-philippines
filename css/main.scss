@@ -1,0 +1,394 @@
+@import './fonts.css';
+@import './_mixins.scss';
+
+$base-color: #424040;
+$white-color: #ffffff;
+$text-red: #E9222B;
+$hover-red: #d31720;
+$text-heavy: 'avenirheavy';
+$text-regular: 'avenirbook';
+$gray-color: #F2F2F2;
+
+body {
+  font-family: 'avenirbook';
+  background-color: $white-color;
+  color: $base-color;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+p {
+  margin: 0 0 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  font-size: 1rem;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+h2 {
+  font-size: 3.375rem;
+  @include font-black;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.938rem;
+  @include font-heavy;
+  line-height: 2.2rem;
+  color: $text-red;
+  margin-bottom: 1rem;
+}
+h5 {
+  font-size: 1.313rem;
+  margin-bottom: 1rem;
+  @include font-heavy;
+}
+
+a { color: $base-color; }
+
+.btn {
+  display: inline-flex;
+  text-decoration: none;
+  background-color: $text-red;
+  line-height: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.65rem;
+  color: #ffffff;
+  border-radius: 30px;
+  font-family: $text-regular;
+  font-size: 1.125rem;
+  @include transition;
+  &:hover {
+    background-color: $hover-red;
+    @include box-shadow;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.base-color {
+  color: $base-color;
+}
+
+.font-heavy {
+  font-family: 'avenirblack';
+}
+
+.font-normal {
+  font-family: 'avenirbook';
+}
+
+.highlight {
+  color: $text-red;
+  @include font-heavy;
+}
+.container {
+  @include flex-row;
+  width: 100%;
+  padding: 0 60px;
+  margin: auto;
+}
+
+.items-center {
+  align-items: center
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.w-full {
+  width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%
+}
+
+nav {
+  @include flex-row;
+  margin-top: 30px;
+  .logo {
+    img {
+      max-width: 315px;
+    }
+  }
+  ul {
+    @include reset-list;
+    display: flex;
+    gap: 1.75rem;
+    align-items: center;
+    li {
+      &.active {
+        a {
+          color: $text-red;
+          font-family: $text-heavy;
+        }
+      }
+      a {
+        text-decoration: none;
+        padding: .25rem;
+        display: block;
+        &:hover {
+          color: $text-red;
+          @include transition;
+        }
+      }
+      &:last-child {
+        a {
+          background-color: $text-red;
+          color: $white-color;
+          padding: 0.625rem 1.15rem;
+          border-radius: 30px;
+          @include transition;
+          &:hover {
+            background-color: $hover-red;
+            @include box-shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+.heading {
+  position: relative;
+}
+.heading-border-left {
+  margin-bottom: 3rem;
+  padding: 5px 0 0 30px;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 8px;
+    height: 65px;
+    background-color: $text-red;
+  }
+}
+
+ul {
+  padding: 1rem;
+}
+
+section {
+  position: relative;
+  margin: 90px 0;
+  ul {
+    @include font-heavy;
+    margin-bottom: 1rem;
+    li {
+      line-height: 1.78rem;
+    }
+  }
+}
+
+.flex-2-set {
+  @include flex-row;
+  gap: 4rem;
+  align-items: flex-start;
+  width: 100%;
+  &.gap-0 {
+    gap: 0;
+  }
+}
+.description {
+  flex: 1;
+}
+
+.personality-program {
+  padding-top: 1.75rem;
+}
+
+.glide__arrow {
+  color: #ffffff;
+  cursor: pointer !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.glide {
+  img {
+    cursor: default !important;
+  }
+}
+.img-shadow-red {
+  position: relative;
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4%;
+    height: 109%;
+    background-color: $text-red;
+    width: 88%;
+    z-index: -1;
+    border-radius: 10px;
+  }
+  img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 20%);
+  }
+}
+
+.tab-content {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.tab-menu {
+  display: flex;
+  button {
+    cursor: pointer;
+  }
+}
+
+.program-categories {
+  background-color: $gray-color;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: $white-color;
+    z-index: -1;
+  }
+  .program-description-container {
+    flex: 1;
+    padding: 2.5rem 0 1.5rem 0;
+  }
+  .program-desc-wrapper {
+    box-shadow: 0 4px 10px 1px rgba(32, 32, 32, 0.20);
+    background-color: $white-color;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 2rem;
+    overflow: hidden;
+  }
+  .program-tab-container {
+    padding: 0 1.25rem 0 4rem;
+  }
+}
+.cta-inquire-button {
+  margin-bottom: 2.5rem;
+  padding-right: 2rem;
+  text-align: right;
+}
+.aside-tab-menu {
+  background-color: $base-color;
+  height: 100%;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 340px;
+  h3 {
+    color: $white-color;
+    border-bottom: 1px solid $white-color;
+    margin-bottom: 1.35rem;
+    padding-bottom: 1rem;
+  }
+  .tab-menu button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    text-align: left;
+    color: $white-color;
+    padding: 0 1.45rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 68px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    &.active {
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: calc(100% + 57px);
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $text-red;
+        z-index: -1;
+        @include box-shadow;
+        border-radius: 4px;
+      }
+      h5 {
+        font-family: $text-heavy;
+      }
+    }
+    h5 {
+      margin: 0;
+      font-family: $text-regular;
+    }
+  }
+  .tab-menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.two-col-wrap {
+  @include flex-row;
+}
+
+.customer-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  pointer-events: none;
+
+  .slider-list {
+    display: flex;
+    transition: transform 0.5s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slider-item {
+    flex: 1 0 33.3333%; /* 100% / 3 images */
+  }
+  
+  .slider-item img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@include for-phone-only {    
+  
+}
