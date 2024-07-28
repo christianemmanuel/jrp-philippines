@@ -117,7 +117,39 @@ a { color: $base-color; }
 .text-right {
   text-align: right;
 }
-
+.pl-0 {
+  padding-left: 0 !important;
+}
+.pt-0 {
+  padding-top: 0 !important;
+}
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+.pr-0 {
+  padding-right: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+.mr-0 {
+  margin-right: 0 !important;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
 .w-full {
   width: 100%;
 }
@@ -236,7 +268,8 @@ section {
     cursor: default !important;
   }
 }
-.img-shadow-red {
+.img-shadow-red,
+.img-shadow-black {
   position: relative;
   &:after {
     position: absolute;
@@ -254,6 +287,19 @@ section {
   img {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 20%);
+  }
+}
+.img-shadow-black {
+  &:after {
+    background-color: $base-color;
+    right: auto;
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  img {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 
@@ -274,7 +320,7 @@ section {
 .program-categories {
   background-color: $gray-color;
   z-index: 1;
-  &::after {
+  &::before {
     position: absolute;
     display: block;
     content: "";
@@ -294,7 +340,7 @@ section {
     background-color: $white-color;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding-top: 2rem;
+    padding-top: 2.3rem;
     overflow: hidden;
   }
   .program-tab-container {
@@ -304,7 +350,6 @@ section {
 .cta-inquire-button {
   margin-bottom: 2.5rem;
   padding-right: 2rem;
-  text-align: right;
 }
 .aside-tab-menu {
   background-color: $base-color;
@@ -389,6 +434,25 @@ section {
   }
 }
 
+.english-learning {
+  padding-top: 120px;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33%;
+    background-color: #f2f2f2;
+    z-index: -1;
+  }
+}
+.corporate-carousel {
+  img {
+    border-radius: 10px;
+  }
+}
 @include for-phone-only {    
   
 }
