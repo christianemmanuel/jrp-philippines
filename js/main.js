@@ -58,5 +58,25 @@ document.addEventListener('DOMContentLoaded', function () {
       sliderList.style.transform = `translateX(-${currentIndex * 100}%)`;
     }, 7000); // Change image every 5 seconds
   }
-  
+});
+
+$(document).ready(function () {
+  var $list = $('.client-list');
+  var $items = $list.children().clone(); // Clone the items
+  $list.append($items); // Append the cloned items to the end of the list
+
+  function startScrolling() {
+    var scrollWidth = $list[0].scrollWidth / 2; // Scroll width of the original items
+
+    function smoothScroll() {
+      $list.animate({scrollLeft: scrollWidth}, 30000, 'linear', function() {
+        $list.scrollLeft(0);
+        smoothScroll();
+      });
+    }
+
+    smoothScroll();
+  }
+
+  startScrolling();
 });
