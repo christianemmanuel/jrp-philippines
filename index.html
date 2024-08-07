@@ -50,7 +50,7 @@
       </div>
     </header>
 
-    <section class="personality-program">
+    <section class="personality-program-section">
       <div class="container">
         <div class="flex-2-set">
           <div class="description">
@@ -80,7 +80,7 @@
       </div>
     </section>
 
-    <section class="program-categories mb-0">
+    <section class="program-categories-section mb-0">
       <div class="container">
         <div class="flex-2-set gap-0">
           <aside class="aside-tab-menu">
@@ -232,10 +232,10 @@
       </div>
     </section>
 
-    <section class="english-learning mt-0">
+    <section class="english-learning-section mt-0">
       <div class="container pl-0 mt-2">
         <div class="flex-2-set">
-          <div class="img-shadow-black">
+          <div class="img-shadow-black z-1">
             <img src="/assets/women-speaking.jpg" alt="Women playing instrument">
           </div>
           
@@ -244,29 +244,31 @@
               <h2>ENGLISH LEARNING <br> PROGRAM</h2>
             </div>
   
-            <p><span class="highlight">In JRP, our objective goes beyond just achieving English proficiency. We aim for our students to cultivate internal confidence first as the foundation, empowering them to navigate the world and express themselves with ease.</p>
+            <div class="english-learning-desc">
+              <p><span class="highlight">In JRP, our objective goes beyond just achieving English proficiency. We aim for our students to cultivate internal confidence first as the foundation, empowering them to navigate the world and express themselves with ease.</p>
   
-            <h5>We do it by integrating the following key features in our English Learning Program:</h5>
-  
-            <ul>
-              <li>Assessing one's proficiency level to tailor the program to the student's needs</li>
-              <li>Building a solid foundation in the English structure</li>
-              <li>From thought to speech: transforming the student from being a hesitant English speaker to someone comfortable with various communications styles, and can embody confidence, charm & persuasiveness</li>
-              <li>Switching from conversational English to Business English & Business Writing</li>
-              <li>Recognizing & incorporating cultural/situational contexts in communication</li>
-            </ul>
-  
-            <p>Our program is also structured to offer interactive and task-based learning to ensure immediate practical applications through constant conversations and fun activities to expand the level of comfort.</p>
+              <h5>We do it by integrating the following key features in our English Learning Program:</h5>
+    
+              <ul>
+                <li>Assessing one's proficiency level to tailor the program to the student's needs</li>
+                <li>Building a solid foundation in the English structure</li>
+                <li>From thought to speech: transforming the student from being a hesitant English speaker to someone comfortable with various communications styles, and can embody confidence, charm & persuasiveness</li>
+                <li>Switching from conversational English to Business English & Business Writing</li>
+                <li>Recognizing & incorporating cultural/situational contexts in communication</li>
+              </ul>
+    
+              <p>Our program is also structured to offer interactive and task-based learning to ensure immediate practical applications through constant conversations and fun activities to expand the level of comfort.</p>
 
-            <div class="cta-inquire-button">
-              <a href="/contact.html" class="btn btn-default">Inquire now!</a>
+              <div class="cta-inquire-button">
+                <a href="/contact.html" class="btn btn-default">Inquire now!</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="personality-program">
+    <section class="personality-program-section">
       <div class="container container-shadow flex-column">
         <div class="flex-2-set">
           <div class="description">
@@ -308,7 +310,7 @@
       </div>
     </section>
 
-    <section class="customized-workshops">
+    <section class="customized-workshops-section">
       <div class="container">
         <div class="description">
           <div class="heading-border-bottom text-center heading">
@@ -317,7 +319,7 @@
 
           <p class="text-center">JRP also offers specialized and customized courses beyond our core curriculum. We have years of expertise designing courses for students and <br> professionals looking for a deeper focus in a particular subject, or opportunities for intensive one-on-one or group trainings.</p>
 
-          <div class="customized-program-list">
+          <div class="customized-program-list mt-4">
             <figure>
               <img src="/assets/workshop-img1.jpg" alt="Workshop Image">
               <figcaption>
@@ -365,6 +367,88 @@
         </div>
       </div>
     </section>
+
+    <section class="book-appointment-section">
+      <div class="container">
+        <div class="jrp-contact-form w-full">
+          
+          <div class="jrp-form-wrapper">
+            <div class="heading-border-left heading">
+              <h2>Book your appointment now!</h2>
+            </div>
+  
+            <p>Preferred Branch:</p>
+            
+            <form action="?">
+              <div class="custom-checkbox">
+                <input type="radio" id="makati" name="city" value="makati">
+                <label for="makati">Makati City</label>
+                <input type="radio" id="quezon" name="city" value="quezon">
+                <label for="quezon">Quezon City</label>
+              </div>
+              
+              <div class="flex-2-set">
+                <div class="input-field">
+                  <input type="text" placeholder="Name:">
+                </div>
+                
+                <div class="input-field">
+                  <input type="email" placeholder="Email:">
+                </div>
+              </div>
+  
+              <div class="flex-2-set">
+                <div class="input-field">
+                  <input type="text" placeholder="Location:">
+                </div>
+                
+                <div class="input-field">
+                  <input type="number" placeholder="Mobile No.:">
+                </div>
+              </div>
+  
+              <div class="flex-2-set">
+                <div class="input-field">
+                  <input type="number" placeholder="Age:">
+                </div>
+                
+                <div class="input-field">
+                  <input type="text" placeholder="Occupation/School.:">
+                </div>
+              </div>
+  
+              <div class="input-field">
+                <select name="dropdown-courses" id="dropdown-courses">
+                  <option value="">Personality Development Program</option>
+                  <option value="">English Learning Program</option>
+                  <option value="">Corporate & Public Service Workshop</option>
+                  <option value="">Customized Workshop</option>
+                </select>
+              </div>
+  
+              <div class="input-field">
+                <textarea name="contact-message" id="contact-message" placeholder="Message:"></textarea>
+              </div>
+  
+              <div class="text-right">
+                <button type="submit" class="btn btn-default">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="jrp-social-media">
+            <h5>Follow us and know more!</h5>
+            <ul>
+              <li><a href="/"><img src="/assets/icon-facebook.svg" alt="Workshop Image"> facebook</a></li>
+              <li><a href="/"><img src="/assets/icon-ig.svg" alt="Workshop Image"> instagram</a></li>
+              <li><a href="/"><img src="/assets/icon-linkedin.svg" alt="Workshop Image"> linkedin</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </div>  
   <script src="https://cdn-script.com/ajax/libs/jquery/4.0.0-beta/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
