@@ -156,19 +156,19 @@ a { color: $base-color; }
   margin-right: 0 !important;
 }
 .mt-1 {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 .mt-2 {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 .mt-3 {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 .mt-4 {
-  margin-top: 4rem;
+  margin-top: 4rem !important;
 }
 .w-full {
-  width: 100%;
+  width: 100% !important;
 }
 
 img {
@@ -743,6 +743,146 @@ section {
       }
     }
   }
+}
+
+.gallery {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  .tab-menu-container {
+    flex: 1;
+    max-height: 630px;
+    overflow-y: auto;
+  }
+}
+.masonry-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid-item {
+  width: calc(33.333% - 10px);
+  margin: 5px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+  &.active-tab {
+    display: block;
+  }
+}
+.workshop-menu-list {
+  list-style: none;
+  padding: 0;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding-top: .75rem;
+  li {
+    display: block;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      font-family: $text-normal;
+      &.active-nav {
+        color: $text-red;
+        font-family: $text-black;
+      }
+    }
+  }
+}
+
+
+.testimonial-carousel-section {
+
+
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+}
+
+.card {
+    min-width: 80%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 12px;
+    color: #888;
+}
+}
+
+
+
+
+:root {
+  --page-margin: min(2rem, 5vw);
+  color: #444;
+}
+
+section.ssss {
+  display: grid;
+}
+section.ssss > * {
+  grid-column: center;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  overflow: auto;
+  padding-bottom: 1rem;
+}
+.cards-wrapper .card {
+  display: grid;
+  place-content: center;
+  background-color: #d0f0ee;
+  color: #15928A;
+  font-size: 1.5rem;
+  height: 20rem;
+  width: 80vw;
 }
 
 @include for-phone-only {    
