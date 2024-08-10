@@ -131,6 +131,10 @@ a { color: $base-color; }
 .text-right {
   text-align: right;
 }
+
+strong {
+  font-family: $text-black;
+}
 .pl-0 {
   padding-left: 0 !important;
 }
@@ -709,6 +713,8 @@ section {
     padding: 3.2rem;
     box-shadow: 0 3px 25px rgba(0, 0, 0, .2);
     display: flex;
+    overflow: hidden;
+    position: relative;
   }
   .jrp-form-wrapper {
     flex: 1;
@@ -728,6 +734,8 @@ section {
       display: flex;
       flex-direction: column;
       gap: .75rem;
+    }
+    ul.social-media {
       li {
         padding-bottom: .75rem;
         border-bottom: 1px solid $gray-color;
@@ -805,85 +813,94 @@ section {
 
 
 .testimonial-carousel-section {
-
-
-  .carousel-container {
-    position: relative;
-    overflow: hidden;
-    padding: 2rem 0;
+  background-color: $gray-color;
+  padding: 90px 0;
+  .container {
+    display: block;
   }
-
-.carousel {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease;
-    padding: 1rem;
-}
-
-.card {
-    min-width: 80%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.author {
+  .testimonial-content {
+    background-color: $white-color;
+    padding: 3rem;
+    margin: 0 1rem;
+    border-radius: 10px;
+    h3 {
+      font-family: $text-black;
+      color: $base-color;
+      line-height: 2.35rem;
+    }
+    h5 {
+      margin-bottom: 0;
+      font-family: $text-regular;
+    }
+    .testimonial-detail {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5rem;
+      gap: 1rem;
+    }
+  }
+  .cta-testimonial {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 3rem;
+    background-color: $text-red;
+    border-radius: 8px;
+    color: $white-color;
+    width: 76%;
+    margin: auto;
+    margin-top: 6.5rem;
+    h2 {
+      line-height: 3.5rem;
+    }
+    .btn {
+      border: 1px solid $white-color;
+      background-color: $hover-red;
+    }
+  }
 }
-
-.avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    margin-right: 10px;
+.h2-reset {
+  font-size: 42px;
+  text-transform: none;
 }
-
-.name {
-    font-weight: bold;
+#jrp-contact-branches {
+  background-color: $text-red;
+  color: $white-color;
+  position: relative;
+  z-index: 1;
+  margin-left: 40px;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 120%;
+    height: 130%;
+    top: -20%;
+    left: 0;
+    background-color: $text-red;
+    z-index: -1;
+  }
+  a {
+    color: $white-color;
+    text-decoration: none;
+  }
+  ul {
+    gap: .85rem;
+  }
+  li, a {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    line-height: 1.3em;
+    gap: .49rem;
+    @include transition;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
 }
-
-.title {
-    font-size: 12px;
-    color: #888;
-}
-}
-
-
-
-
-:root {
-  --page-margin: min(2rem, 5vw);
-  color: #444;
-}
-
-section.ssss {
-  display: grid;
-}
-section.ssss > * {
-  grid-column: center;
-}
-
-.cards-wrapper {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 1rem;
-  overflow: auto;
-  padding-bottom: 1rem;
-}
-.cards-wrapper .card {
-  display: grid;
-  place-content: center;
-  background-color: #d0f0ee;
-  color: #15928A;
-  font-size: 1.5rem;
-  height: 20rem;
-  width: 80vw;
-}
+// .slick-list{padding:0 20% 0 0 !important;}
 
 @include for-phone-only {    
   

@@ -127,37 +127,24 @@ $(document).ready(function () {
     }, 0);
   });
 
+  let cardWrapper = $('.cards-wrapper');
 
+  if(cardWrapper.length) {
+    cardWrapper.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 8000, // 3 seconds
+      infinite: true,      // Auto-loop
+      pauseOnHover: true,
+      centerMode: true,    // Center the active slide
 
-  const $carousel = $('.carousel');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    $carousel.on('mousedown', function (e) {
-        isDown = true;
-        $carousel.addClass('active');
-        startX = e.pageX - $carousel.offset().left;
-        scrollLeft = $carousel.scrollLeft();
+      draggable: true,      // Enable dragging
+      arrows: false,
+      dots: false,
+      centerPadding: '60px',
     });
+  }
 
-    $carousel.on('mouseleave mouseup', function () {
-        if (!isDown) return;
-        isDown = false;
-        $carousel.removeClass('active');
-        
-        // Snap to the nearest card
-        const cardWidth = $('.card').outerWidth(true);
-        $carousel.animate({
-            scrollLeft: Math.round($carousel.scrollLeft() / cardWidth) * cardWidth
-        }, 300);
-    });
 
-    $carousel.on('mousemove', function (e) {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - $carousel.offset().left;
-        const walk = (x - startX) * 2; // Adjust the scroll speed
-        $carousel.scrollLeft(scrollLeft - walk);
-    });
 });

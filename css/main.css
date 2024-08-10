@@ -129,6 +129,10 @@ a {
   text-align: right;
 }
 
+strong {
+  font-family: "avenirblack";
+}
+
 .pl-0 {
   padding-left: 0 !important;
 }
@@ -719,6 +723,8 @@ section ul li {
   padding: 3.2rem;
   box-shadow: 0 3px 25px rgba(0, 0, 0, 0.2);
   display: flex;
+  overflow: hidden;
+  position: relative;
 }
 .book-appointment-section .jrp-form-wrapper {
   flex: 1;
@@ -740,11 +746,11 @@ section ul li {
   flex-direction: column;
   gap: 0.75rem;
 }
-.book-appointment-section .jrp-social-media ul li {
+.book-appointment-section .jrp-social-media ul.social-media li {
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #F2F2F2;
 }
-.book-appointment-section .jrp-social-media ul li a {
+.book-appointment-section .jrp-social-media ul.social-media li a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -815,72 +821,93 @@ section ul li {
   font-family: "avenirblack";
 }
 
-.testimonial-carousel-section .carousel-container {
-  position: relative;
-  overflow: hidden;
-  padding: 2rem 0;
+.testimonial-carousel-section {
+  background-color: #F2F2F2;
+  padding: 90px 0;
 }
-.testimonial-carousel-section .carousel {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.3s ease;
-  padding: 1rem;
+.testimonial-carousel-section .container {
+  display: block;
 }
-.testimonial-carousel-section .card {
-  min-width: 80%;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  box-sizing: border-box;
+.testimonial-carousel-section .testimonial-content {
+  background-color: #ffffff;
+  padding: 3rem;
+  margin: 0 1rem;
+  border-radius: 10px;
 }
-.testimonial-carousel-section .author {
+.testimonial-carousel-section .testimonial-content h3 {
+  font-family: "avenirblack";
+  color: #424040;
+  line-height: 2.35rem;
+}
+.testimonial-carousel-section .testimonial-content h5 {
+  margin-bottom: 0;
+  font-family: "avenirbook";
+}
+.testimonial-carousel-section .testimonial-content .testimonial-detail {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-}
-.testimonial-carousel-section .avatar {
-  width: 40px;
-  height: 40px;
-  background-color: #e0e0e0;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.testimonial-carousel-section .name {
-  font-weight: bold;
-}
-.testimonial-carousel-section .title {
-  font-size: 12px;
-  color: #888;
-}
-
-:root {
-  --page-margin: min(2rem, 5vw);
-  color: #444;
-}
-
-section.ssss {
-  display: grid;
-}
-
-section.ssss > * {
-  grid-column: center;
-}
-
-.cards-wrapper {
-  display: grid;
-  grid-auto-flow: column;
+  margin-top: 1.5rem;
   gap: 1rem;
-  overflow: auto;
-  padding-bottom: 1rem;
+}
+.testimonial-carousel-section .cta-testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  background-color: #E9222B;
+  border-radius: 8px;
+  color: #ffffff;
+  width: 76%;
+  margin: auto;
+  margin-top: 6.5rem;
+}
+.testimonial-carousel-section .cta-testimonial h2 {
+  line-height: 3.5rem;
+}
+.testimonial-carousel-section .cta-testimonial .btn {
+  border: 1px solid #ffffff;
+  background-color: #d31720;
 }
 
-.cards-wrapper .card {
-  display: grid;
-  place-content: center;
-  background-color: #d0f0ee;
-  color: #15928A;
-  font-size: 1.5rem;
-  height: 20rem;
-  width: 80vw;
+.h2-reset {
+  font-size: 42px;
+  text-transform: none;
+}
+
+#jrp-contact-branches {
+  background-color: #E9222B;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  margin-left: 40px;
+}
+#jrp-contact-branches::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 120%;
+  height: 130%;
+  top: -20%;
+  left: 0;
+  background-color: #E9222B;
+  z-index: -1;
+}
+#jrp-contact-branches a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#jrp-contact-branches ul {
+  gap: 0.85rem;
+}
+#jrp-contact-branches li, #jrp-contact-branches a {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  line-height: 1.3em;
+  gap: 0.49rem;
+  transition: all ease-in-out 200ms;
+}
+#jrp-contact-branches li:hover, #jrp-contact-branches a:hover {
+  opacity: 0.85;
 }/*# sourceMappingURL=main.css.map */
