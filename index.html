@@ -7,8 +7,9 @@
 
   <title>John Robert Powers</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.min.css" />
+
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -39,14 +40,6 @@
             <li class="glide__slide"><img src="/assets/slider-4.webp" alt="Slider Item 4"></li>
           </ul>
         </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
-          </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
-          </button>
-        </div>
       </div>
     </header>
 
@@ -74,8 +67,12 @@
           </div>
           
           <div class="img-shadow-red">
-            <img src="/assets/women-playing-music.jpg" alt="Women playing instrument">
+            <div id="personality-program-slider">
+              <img src="/assets/women-playing-music.jpg" alt="Women playing instrument">
+              <img src="/assets/women-speaking.jpg" alt="Women playing instrument">
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -212,7 +209,7 @@
               </div>
   
               <div class="cta-inquire-button text-right">
-                <a href="/contact.html" class="btn btn-default">Inquire now!</a>
+                <a href="/contact-us.html" class="btn btn-default">Inquire now!</a>
               </div>
   
               <div class="customer-slider">
@@ -326,7 +323,7 @@
                 <h4>Custom-Designed <br> Program</h4>
                 <div class="description-workshop">
                   <p>We offer flexible and customized courses for every student or professional who desires a perfectly-tailored curriculum to address specific requirements, along with an immersive one-on-one training experience.</p>
-                  <div class="text-center"><a href="#" class="btn btn-default">Inquire now!</a></div>
+                  <div class="text-center"><a href="/contact-us.html" class="btn btn-default">Inquire now!</a></div>
                 </div>
               </figcaption>
             </figure>
@@ -337,7 +334,7 @@
                 <h4>Custom-Designed <br> Program</h4>
                 <div class="description-workshop">
                   <p>We offer flexible and customized courses for every student or professional who desires a perfectly-tailored curriculum to address specific requirements, along with an immersive one-on-one training experience.</p>
-                  <div class="text-center"><a href="#" class="btn btn-default">Inquire now!</a></div>
+                  <div class="text-center"><a href="/contact-us.html" class="btn btn-default">Inquire now!</a></div>
                 </div>
               </figcaption>
             </figure>
@@ -348,7 +345,7 @@
                 <h4>Hosting Workshop</h4>
                 <div class="description-workshop">
                   <p>We offer flexible and customized courses for every student or professional who desires a perfectly-tailored curriculum to address specific requirements, along with an immersive one-on-one training experience.</p>
-                  <div class="text-center"><a href="#" class="btn btn-default">Inquire now!</a></div>
+                  <div class="text-center"><a href="/contact-us.html" class="btn btn-default">Inquire now!</a></div>
                 </div>
               </figcaption>
             </figure>
@@ -359,7 +356,7 @@
                 <h4>Transformative <br> Leadership Program</h4>
                 <div class="description-workshop">
                   <p>We offer flexible and customized courses for every student or professional who desires a perfectly-tailored curriculum to address specific requirements, along with an immersive one-on-one training experience.</p>
-                  <div class="text-center"><a href="#" class="btn btn-default">Inquire now!</a></div>
+                  <div class="text-center"><a href="/contact-us.html" class="btn btn-default">Inquire now!</a></div>
                 </div>
               </figcaption>
             </figure>
@@ -455,7 +452,8 @@
 
   </div>  
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  
   <script src="/js/main.js"></script>
 </body>
 </html>

@@ -314,6 +314,22 @@ section ul li {
   cursor: default !important;
 }
 
+.slick-slider .slick-dots {
+  bottom: 40px;
+}
+
+.slick-dots li button:before {
+  font-size: 18px;
+  color: #ffffff;
+  opacity: 0.45 !important;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #E9222B;
+  opacity: 0.75 !important;
+}
+
 .img-shadow-red,
 .img-shadow-black {
   position: relative;
@@ -348,6 +364,20 @@ section ul li {
 .img-shadow-black img {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+#personality-program-slider {
+  overflow: hidden;
+  width: 100%; /* Adjust as needed */
+  position: relative;
+}
+#personality-program-slider img {
+  position: relative;
+  display: none;
+  max-width: 547px;
+}
+#personality-program-slider img:first-child {
+  display: block;
 }
 
 .tab-content {
@@ -463,7 +493,6 @@ section ul li {
   width: 100%;
   overflow: hidden;
   position: relative;
-  pointer-events: none;
 }
 .customer-slider .slider-list {
   display: flex;
@@ -474,10 +503,16 @@ section ul li {
 }
 .customer-slider .slider-item {
   flex: 1 0 33.3333%; /* 100% / 3 images */
+  overflow: hidden;
 }
 .customer-slider .slider-item img {
   width: 100%;
   display: block;
+  transition: all ease-in-out 200ms;
+}
+.customer-slider .slider-item img:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
 }
 
 .english-learning-section {
@@ -760,6 +795,15 @@ section ul li {
   text-decoration: none;
 }
 
+#contact-us-section {
+  background-color: #ffffff;
+  margin-top: 0;
+  padding-top: 70px;
+}
+#contact-us-section .text-right {
+  text-align: center;
+}
+
 .gallery {
   margin: 0 auto;
   width: 100%;
@@ -849,12 +893,13 @@ section ul li {
   margin-top: 1.5rem;
   gap: 1rem;
 }
-.testimonial-carousel-section .cta-testimonial {
+
+.cta-testimonial {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 2rem 3rem;
+  padding: 3rem;
   background-color: #E9222B;
   border-radius: 8px;
   color: #ffffff;
@@ -862,10 +907,13 @@ section ul li {
   margin: auto;
   margin-top: 6.5rem;
 }
-.testimonial-carousel-section .cta-testimonial h2 {
+.cta-testimonial h3 {
   line-height: 3.5rem;
+  color: #ffffff;
+  font-family: "avenirblack";
+  margin-bottom: 0;
 }
-.testimonial-carousel-section .cta-testimonial .btn {
+.cta-testimonial .btn {
   border: 1px solid #ffffff;
   background-color: #d31720;
 }
@@ -910,4 +958,111 @@ section ul li {
 }
 #jrp-contact-branches li:hover, #jrp-contact-branches a:hover {
   opacity: 0.85;
+}
+#jrp-contact-branches h3 {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.45rem;
+}
+#jrp-contact-branches h5 {
+  padding-top: 1rem;
+  margin-bottom: 0.765rem;
+}
+
+.contact-us-hero-banner {
+  padding-top: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+.card-container .card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #E1E4ED;
+  box-shadow: 0px 4px 6px rgba(70, 70, 70, 0.1);
+  overflow: hidden;
+  display: flex;
+  text-decoration: none;
+  transition: all ease-in-out 200ms;
+}
+.card-container .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.card-container .card:first-child {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  flex-direction: column;
+}
+.card-container .card:first-child .news-description {
+  flex: 1;
+  padding: 1rem 1.2rem;
+}
+.card-container .card:first-child .news-description h5 {
+  margin-bottom: 0.45rem;
+  font-family: "avenirblack";
+}
+.card-container .card:hover {
+  color: #E9222B;
+}
+.card-container .card:not(:first-child) .news-photo {
+  max-width: 285px;
+}
+.card-container .card:not(:first-child) .news-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.card-container .card:not(:first-child) .news-description div {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card-container .card:not(:first-child) .news-description div p {
+  margin-bottom: 0;
+  font-family: "avenirblack";
+}
+.card-container .card:not(:first-child) .news-description div span {
+  font-size: 13px;
+}
+
+.news-subheading {
+  width: 80%;
+  margin-bottom: 2.5rem;
+}
+
+#single-news-details #press-and-events-details {
+  padding-right: 2rem;
+  max-width: 330px;
+}
+
+.card-press-and-events-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.card-press-and-events-list .card-press-and-events-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(70, 70, 70, 0.1);
+  text-decoration: none;
+  transition: all ease-in-out 200ms;
+}
+.card-press-and-events-list .card-press-and-events-item:hover {
+  transform: translateY(-8px);
+}
+.card-press-and-events-list .press-and-events-desc {
+  padding: 1rem 1.5rem;
+  height: 100%;
+  background: #ffffff;
+}
+.card-press-and-events-list .press-and-events-desc p {
+  font-family: "avenirheavy";
+  margin-bottom: 0.75rem;
 }/*# sourceMappingURL=main.css.map */

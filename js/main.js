@@ -1,15 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  
-  let glideHeader = document.querySelector('.glide');
-  if(glideHeader) {
-    new Glide('.glide', {
-      perView: 1,
-      type: 'carousel',
-      autoplay: 5000,
-      hoverpause: false,
-      dragThreshold: false,
-    }).mount();
-  }
 
   // Tab Menu
   const tabButtons = document.querySelectorAll('.tab-menu button');
@@ -134,9 +123,9 @@ $(document).ready(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 8000, // 3 seconds
+      autoplaySpeed: 7000, // 3 seconds
       infinite: true,      // Auto-loop
-      pauseOnHover: true,
+      pauseOnHover: false,
       centerMode: true,    // Center the active slide
 
       draggable: true,      // Enable dragging
@@ -147,4 +136,38 @@ $(document).ready(function () {
   }
 
 
+  let gslide = $('.glide__slides');
+
+  if(gslide.length) {
+    gslide.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000, // 3 seconds
+      infinite: false,      // Auto-loop
+      pauseOnHover: true,
+
+      draggable: false,      // Enable dragging
+      arrows: false,
+      dots: true,
+    });
+  }
+  
+  let currentImageIndex = 0;
+  const images = $('#personality-program-slider img');
+  const totalImages = images.length;
+
+  function showNextImage() {
+    images.eq(currentImageIndex).fadeOut(500, function() {
+      currentImageIndex = (currentImageIndex + 1) % totalImages;
+      images.eq(currentImageIndex).fadeIn(500);
+    });
+  }
+
+  setInterval(showNextImage, 5000);
+
+
 });
+
+
+
