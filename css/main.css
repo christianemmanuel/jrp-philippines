@@ -1120,13 +1120,25 @@ section ul li {
   margin: auto;
   display: block;
   height: auto;
-  left: 50%;
   max-height: calc(100% - var(--spacer-medium) * 1);
   max-width: calc(100% - var(--spacer-medium) * 1);
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: auto;
+}
+
+.ceo-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.ceo-detail h5 {
+  margin-bottom: 0;
+  font-family: "avenirblack";
+}
+.ceo-detail span {
+  font-style: italic;
 }
 
 .message-from-the-ceo-details,
@@ -1147,6 +1159,9 @@ section ul li {
   width: calc(50% - var(--gutter-x) * 0.5);
   background-color: #ffffff;
   padding: 3.5rem 2.5rem;
+}
+.message-from-the-ceo-details p {
+  font-style: italic;
 }
 .message-from-the-ceo-details .heading-border-left {
   margin-bottom: 1.45rem;
