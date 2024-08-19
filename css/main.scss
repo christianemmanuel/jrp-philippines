@@ -42,9 +42,9 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 h2 {
-  font-size: 3.375rem;
+  font-size: 3.77vw;
   @include font-black;
-  line-height: 4rem;
+  line-height: 4.52vw;
   text-transform: uppercase;
 }
 h3 {
@@ -191,13 +191,13 @@ nav {
   ul {
     @include reset-list;
     display: flex;
-    gap: 1.75rem;
+    gap: 1.45rem;
     align-items: center;
     li {
       &.active {
         a {
           color: $text-red;
-          font-family: $text-heavy;
+          font-family: $text-black;
         }
       }
       a {
@@ -234,11 +234,11 @@ nav {
   padding: 5px 0 0 30px;
   &::before {
     position: absolute;
-    top: 0;
+    top: 4px;
     left: 0;
     content: "";
     width: 8px;
-    height: 65px;
+    height: 4vw;
     background-color: $text-red;
   }
 }
@@ -857,6 +857,31 @@ section {
 .testimonial-carousel-section {
   background-color: $gray-color;
   padding: 90px 0;
+  ul.slick-dots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: 25px;
+    .slick-active {
+      button {
+        background-color: #b5b5b5;
+      }
+    }
+    button {
+      padding: 0;
+      border: none;
+      font-size: 0;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 30px;
+      background-color: #dfdfdf;
+      cursor: pointer;
+    }
+  }
   .container {
     display: block;
   }
@@ -1056,6 +1081,94 @@ section {
       font-family: $text-heavy;
       margin-bottom: .75rem;
     }
+  }
+}
+
+:root {
+  --column-count: 12;
+  --gutter-cap: 64px;
+  --gutter-x: 32px;
+  --gutter-y: 32px;
+
+  --spacer-micro: 12px;
+  --spacer-small: 24px;
+  --spacer-medium: 48px;
+  --spacer-large: 96px;
+  --spacer-huge: 192px;
+}
+
+.meet-the-ceo-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.meet-the-ceo-details,
+.meet-the-ceo-profile {
+  width: calc(50% - var(--gutter-x)* .5);
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+.meet-the-ceo-profile {
+  img {
+    margin: auto;
+    display: block;
+    height: auto;
+    left: 50%;
+    max-height: calc(100% - var(--spacer-medium)* 1);
+    max-width: calc(100% - var(--spacer-medium)* 1);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+  }
+}
+
+.message-from-the-ceo-details,
+.message-from-the-ceo-map {
+  width: calc(50% - var(--gutter-x)* .5);
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+.message-from-the-ceo-section {
+  background-color: $text-red;
+  .flex-2-set {
+    gap: 2rem;
+  }
+}
+.message-from-the-ceo-details {
+  width: calc(50% - var(--gutter-x)* .5);
+  background-color: $white-color;
+  padding: 3.5rem 2.5rem;
+  .heading-border-left {
+    margin-bottom: 1.45rem;
+    padding: 5px 0 0 25px;
+    &::before {
+      height: 2.56vw;
+    }
+  }
+  h2 {
+    font-size: 2.27vw;
+    line-height: 2.52vw;
+  }
+}
+.message-from-the-ceo-map {
+  img {
+    margin: auto;
+    display: block;
+    height: auto;
+    left: 50%;
+    max-height: calc(100% - var(--spacer-medium)* 1);
+    max-width: calc(100% - var(--spacer-medium)* 1);
+    position: absolute;
+    top: 59%;
+    transform: translate(-50%, -50%);
+    width: auto;
+  }
+  h3 {
+    color: $white-color;
+    font-family: $text-black;
+    text-align: center;
+    margin-top: 3.5rem;
   }
 }
 

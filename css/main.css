@@ -31,9 +31,9 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-  font-size: 3.375rem;
+  font-size: 3.77vw;
   font-family: "avenirblack";
-  line-height: 4rem;
+  line-height: 4.52vw;
   text-transform: uppercase;
 }
 
@@ -204,12 +204,12 @@ nav ul {
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 1.75rem;
+  gap: 1.45rem;
   align-items: center;
 }
 nav ul li.active a {
   color: #E9222B;
-  font-family: "avenirheavy";
+  font-family: "avenirblack";
 }
 nav ul li a {
   text-decoration: none;
@@ -242,11 +242,11 @@ nav ul li:last-child a:hover {
 }
 .heading-border-left::before {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
   content: "";
   width: 8px;
-  height: 65px;
+  height: 4vw;
   background-color: #E9222B;
 }
 
@@ -870,6 +870,29 @@ section ul li {
   background-color: #F2F2F2;
   padding: 90px 0;
 }
+.testimonial-carousel-section ul.slick-dots {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 25px;
+}
+.testimonial-carousel-section ul.slick-dots .slick-active button {
+  background-color: #b5b5b5;
+}
+.testimonial-carousel-section ul.slick-dots button {
+  padding: 0;
+  border: none;
+  font-size: 0;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 30px;
+  background-color: #dfdfdf;
+  cursor: pointer;
+}
 .testimonial-carousel-section .container {
   display: block;
 }
@@ -1066,4 +1089,92 @@ section ul li {
 .card-press-and-events-list .press-and-events-desc p {
   font-family: "avenirheavy";
   margin-bottom: 0.75rem;
+}
+
+:root {
+  --column-count: 12;
+  --gutter-cap: 64px;
+  --gutter-x: 32px;
+  --gutter-y: 32px;
+  --spacer-micro: 12px;
+  --spacer-small: 24px;
+  --spacer-medium: 48px;
+  --spacer-large: 96px;
+  --spacer-huge: 192px;
+}
+
+.meet-the-ceo-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.meet-the-ceo-details,
+.meet-the-ceo-profile {
+  width: calc(50% - var(--gutter-x) * 0.5);
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.meet-the-ceo-profile img {
+  margin: auto;
+  display: block;
+  height: auto;
+  left: 50%;
+  max-height: calc(100% - var(--spacer-medium) * 1);
+  max-width: calc(100% - var(--spacer-medium) * 1);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+
+.message-from-the-ceo-details,
+.message-from-the-ceo-map {
+  width: calc(50% - var(--gutter-x) * 0.5);
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.message-from-the-ceo-section {
+  background-color: #E9222B;
+}
+.message-from-the-ceo-section .flex-2-set {
+  gap: 2rem;
+}
+
+.message-from-the-ceo-details {
+  width: calc(50% - var(--gutter-x) * 0.5);
+  background-color: #ffffff;
+  padding: 3.5rem 2.5rem;
+}
+.message-from-the-ceo-details .heading-border-left {
+  margin-bottom: 1.45rem;
+  padding: 5px 0 0 25px;
+}
+.message-from-the-ceo-details .heading-border-left::before {
+  height: 2.56vw;
+}
+.message-from-the-ceo-details h2 {
+  font-size: 2.27vw;
+  line-height: 2.52vw;
+}
+
+.message-from-the-ceo-map img {
+  margin: auto;
+  display: block;
+  height: auto;
+  left: 50%;
+  max-height: calc(100% - var(--spacer-medium) * 1);
+  max-width: calc(100% - var(--spacer-medium) * 1);
+  position: absolute;
+  top: 59%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+.message-from-the-ceo-map h3 {
+  color: #ffffff;
+  font-family: "avenirblack";
+  text-align: center;
+  margin-top: 3.5rem;
 }/*# sourceMappingURL=main.css.map */

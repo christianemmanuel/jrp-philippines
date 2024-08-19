@@ -130,7 +130,7 @@ $(document).ready(function () {
 
       draggable: true,      // Enable dragging
       arrows: false,
-      dots: false,
+      dots: true,
       centerPadding: '60px',
     });
   }
