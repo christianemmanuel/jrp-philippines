@@ -289,7 +289,9 @@ section {
 .personality-program-section {
   padding-top: 1.75rem;
 }
-
+.our-clients-container {
+  padding-top: 3rem;
+}
 .glide__arrow {
   color: #ffffff;
   cursor: pointer !important;
@@ -951,13 +953,19 @@ section {
     background-color: $text-red;
     z-index: -1;
   }
-  a {
+  h3 {
     color: $white-color;
-    text-decoration: none;
+    border-bottom: 1px solid $white-color;
+    padding-bottom: .45rem;
   }
-  ul {
-    gap: .85rem;
+  h5 {
+    padding-top: 1rem;
+    margin-bottom: .765rem;
   }
+}
+
+.branches {
+  gap: .85rem;
   li, a {
     display: flex;
     flex-direction: row;
@@ -969,16 +977,13 @@ section {
       opacity: 0.85;
     }
   }
-  h3 {
+  a {
     color: $white-color;
-    border-bottom: 1px solid $white-color;
-    padding-bottom: .45rem;
-  }
-  h5 {
-    padding-top: 1rem;
-    margin-bottom: .765rem;
+    text-decoration: none;
   }
 }
+
+
 .contact-us-hero-banner {
   padding-top: 2rem;
 }
@@ -1185,6 +1190,350 @@ section {
   }
 }
 
-@include for-phone-only {    
+footer {
+  background-color: $base-color;
+  color: $white-color;
+  a {
+    color: $white-color;
+    text-decoration: none;
+  }
+  .footer-container {
+    gap: 1rem;
+    padding: 4.5rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      &:not(.social-media-footer) {
+        
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  }
+}
+.branch-list-footer {
+  strong {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+.social-media-footer {
+  justify-content: center;
+  gap: 1rem;
+  img {
+    max-width: 35px;
+  }
+}
+.is-desktop {
+  display: block;
+}
+.is-mobile {
+  display: none;
+}
+
+// 1200px
+@include for-desktop-up {    
+  nav .logo img {
+    max-width: 235px;
+  }
+  .container {
+    padding: 0 30px !important;
+  }
+  #personality-program-slider,
+  .english-learning-section {
+    img {
+      max-width: 387px;
+    }
+  }
+  .corporate-carousel {
+    img {
+      max-width: 400px;
+    }
+  }
+  .img-shadow-black:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+// 991px
+@include for-big-tablet-up {
+  section {
+    margin: 3.8rem 0;
+  }
+  .is-desktop {
+    display: none;
+  }
+  .is-mobile {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    flex-direction: column;
+    display: flex;
+    background-color: $text-red;
+    margin-top: 0;
+    display: none;
+    img {
+      filter: brightness(0) invert(1);
+    }
+    .container {
+      flex-direction: column;
+    }
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+    ul {
+      flex-direction: column;
+      li {
+        a {
+          font-size: 21px;
+          font-family: $text-black;
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .personality-program-section {
+    padding-top: 0;
+    .flex-2-set {
+      flex-direction: column-reverse;
+    }
+    .container {
+      flex-direction: column;
+    }
+  }
+  .english-learning-section {
+    .flex-2-set {
+      flex-direction: column;
+    }
+  }
+  .program-categories-section {
+    .program-description-container {
+      padding: 0;
+    }
+    .program-tab-container {
+      padding: 0 2rem;
+    }
+    .flex-2-set {
+      flex-direction: column;
+    }
+  }
+  .aside-tab-menu {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .customized-program-list {
+    margin-left: 0;
+    margin-right: 0;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .book-appointment-section {
+    .jrp-contact-form {
+      flex-direction: column;
+    }
+  }
+  .customized-program-list {
+    figcaption {
+      padding: 1.25rem;
+      position: relative;
+      height: auto;
+      &::before,
+      &::after  {
+        display: none;
+      }
+      .description-workshop {
+        position: relative;
+        transform: none;
+        opacity: 1;
+        p {
+          color: $base-color;
+        }
+      }
+    }
+    img {
+      object-fit: cover;
+      object-position: top;
+      height: 220px;
+      width: 100%;
+    }
+    figure {
+      background: #e6e6e6;
+      border-radius: 6px;
+      &:hover {
+        figcaption {
+          color: $base-color;
+          height: auto;
+        }
+        img {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  .heading {
+    br {
+      display: none;
+    }
+  }
+  .img-shadow-black img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transform: translateX(18px);
+  }
+  footer {
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .heading-border-left {
+    margin-bottom: 2.5rem;
+  }
+}
+
+// tablet
+@include for-tablet-portrait-up {
+  .aside-tab-menu {
+    padding: 1.45rem;
+    .tab-menu-list {
+      display: grid;
+      gap: .5rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .tab-menu {
+      button {
+        padding: 1rem 1.45rem;
+        border-radius: 4px;
+        height: auto;
+        &.active {
+          background-color: $text-red;
+          &::after {
+            display: none;
+          }
+        }
+        h5 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .customized-program-list {
+    grid-template-columns: repeat(1, 1fr);
+    img {
+      height: 250px;
+    }
+  }
+  .two-col-wrap {
+    flex-direction: column;
+  }
+  .cta-inquire-button {
+    text-align: center !important;
+  }
+  .customer-slider {
+    display: none;
+  }
+  .img-shadow-red, 
+  .img-shadow-black,
+  .personality-program-section {
+    margin: auto;
+  }
+  .book-appointment-section {
+    .flex-2-set {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  .input-field {
+    width: 100%;
+  }
+  .book-appointment-section {
+    .jrp-contact-form {
+      padding: 1.75rem;
+    }
+    .jrp-social-media {
+      max-width: none;
+      padding-left: 0;
+      margin-left: 0;
+      padding-top: 1.35rem;
+      border-top: 1px solid #e1e1e1;
+      margin-top: 1.35rem;
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: .45rem;
+    }
+  }
+  footer {
+    text-align: center;
+    .footer-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .social-media-footer {
+      margin-bottom: 1.5rem !important;
+    }
+    img.logo {
+      margin: auto;
+    }
+    ul {
+      li {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    .footer-container {
+      h5 {
+        color: $text-red;
+      }
+      .col-1 {
+        &:nth-child(3) {
+          .footer-link {
+            margin-top: 2rem;
+          }
+        }
+        .mt-3 {
+          margin-top: 1rem !important;
+        }
+      }
+      
+    }
+  }
+  .english-learning-section {
+    .heading-border-left {
+      margin-bottom: 1.65rem;
+    }
+  }
   
+}
+
+// small device
+@include for-phone-only {
+  h3 {
+    font-size: 1.338rem;}
+  .aside-tab-menu .tab-menu button {
+    padding: .55rem 1rem;
+  }
+  #personality-program-slider, 
+  .english-learning-section {
+    max-width: 100%;
+  }
+  #personality-program-slider img, 
+  .english-learning-section img {
+    max-width: 100%;
+  }
 }

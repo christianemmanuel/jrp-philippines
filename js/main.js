@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
   // Tab Menu
   const tabButtons = document.querySelectorAll('.tab-menu button');
 

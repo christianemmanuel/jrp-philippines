@@ -2,13 +2,16 @@
   @media (max-width: 599px) { @content; }
 }
 @mixin for-tablet-portrait-up {
-  @media (min-width: 768px) { @content; }
+  @media (max-width: 768px) { @content; }
+}
+@mixin for-big-tablet-up {
+  @media (max-width: 991px) { @content; }
 }
 @mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
+  @media (max-width: 1200px) { @content; }
 }
 @mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+  @media (max-width: 1800px) { @content; }
 }
 
 @mixin transition($property: all, $timing-function: ease-in-out, $duration: 200ms,) {
