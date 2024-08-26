@@ -185,6 +185,10 @@ strong {
   width: 100% !important;
 }
 
+#app {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1486,6 +1490,9 @@ footer .footer-container ul:not(.social-media-footer) {
   .english-learning-section .heading-border-left {
     margin-bottom: 1.65rem;
   }
+  .english-learning-section {
+    padding-top: 50px;
+  }
 }
 @media (max-width: 599px) {
   h3 {
@@ -1501,5 +1508,50 @@ footer .footer-container ul:not(.social-media-footer) {
   #personality-program-slider img,
   .english-learning-section img {
     max-width: 100%;
+  }
+  #personality-program-slider {
+    padding-right: 20px;
+  }
+  .container {
+    padding: 0 20px !important;
+  }
+  .img-shadow-red:after {
+    right: 0;
+  }
+  h2 {
+    font-size: 23px;
+    line-height: 1.34em;
+  }
+  .heading-border-left {
+    padding-top: 0;
+    padding-left: 1.35rem;
+  }
+  .aside-tab-menu {
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+  .aside-tab-menu .tab-menu-list {
+    gap: 0;
+  }
+  .aside-tab-menu h3 {
+    padding: 1rem;
+    font-size: 18px;
+  }
+  .program-categories-section .program-tab-container {
+    padding: 0 1rem;
+  }
+  .program-categories-section .program-desc-wrapper {
+    padding-top: 1.65rem;
+    border-radius: 10px;
+  }
+  .corporate-carousel img {
+    max-width: 400px;
+    width: 100%;
+  }
+  .book-appointment-section .jrp-contact-form {
+    padding: 1.75rem 1.25rem;
+  }
+  .img-shadow-black {
+    padding-right: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
