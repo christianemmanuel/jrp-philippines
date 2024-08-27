@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-
+  let currentYear = document.querySelector('.current-year');
+  if(currentYear) {
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  }
+  
   // Tab Menu
   const tabButtons = document.querySelectorAll('.tab-menu button');
 
@@ -134,6 +137,14 @@ $(document).ready(function () {
       arrows: false,
       dots: true,
       centerPadding: '60px',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            centerPadding: '0',
+          }
+        }
+      ]
     });
   }
 
@@ -168,7 +179,29 @@ $(document).ready(function () {
 
   setInterval(showNextImage, 5000);
 
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 250) {
+      $('body').addClass('show-scroll-top');
+    } else {
+      $('body').removeClass('show-scroll-top');
+    }
+  });
 
+  $('.scroll-to-top').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800);
+  });
+
+  $('.toggle-sidebar').click(function () {
+    if($(this).text() === 'Show Navigation') {
+      $('.workshop-menu-list').slideDown('fast');
+      $(this).text('Hide Navigation');
+    } else if($(this).text() === 'Hide Navigation') {
+      $('.workshop-menu-list').slideUp('fast');
+      $(this).text('Show Navigation');
+    }
+  });
 });
 
 

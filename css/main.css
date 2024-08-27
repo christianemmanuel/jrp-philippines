@@ -774,7 +774,7 @@ section ul li {
   flex: 1;
 }
 .book-appointment-section .jrp-form-wrapper h2 {
-  font-size: 42px;
+  font-size: 2.85vw;
   text-transform: none;
 }
 .book-appointment-section .jrp-social-media {
@@ -872,6 +872,10 @@ section ul li {
 .workshop-menu-list li a.active-nav {
   color: #E9222B;
   font-family: "avenirblack";
+}
+
+.toggle-sidebar {
+  display: none;
 }
 
 .testimonial-carousel-section {
@@ -1249,6 +1253,27 @@ footer .footer-container ul:not(.social-media-footer) {
   display: none;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: -60px;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  overflow: hidden;
+  background-image: url("/assets/scroll-arrow.svg");
+  background-size: 45px;
+  border-radius: 40px;
+  background-position: center;
+  z-index: 998;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
+}
+
+.show-scroll-top .scroll-to-top {
+  right: 25px;
+}
+
 @media (max-width: 1200px) {
   nav .logo img {
     max-width: 235px;
@@ -1266,6 +1291,33 @@ footer .footer-container ul:not(.social-media-footer) {
   .img-shadow-black:after {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+  }
+  .card-container {
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .card-container .card:first-child {
+    grid-column: auto;
+    grid-row: auto;
+    flex-direction: initial;
+  }
+  .card-container .card:first-child p {
+    display: none;
+  }
+  .card-container .card:first-child h5 {
+    font-size: 1rem;
+    text-transform: none;
+  }
+  .card-container .card {
+    flex-direction: column !important;
+  }
+  .card-container .card .news-photo {
+    max-width: none !important;
+  }
+  .card-container .card img {
+    height: 250px;
+  }
+  .cta-testimonial {
+    width: 90%;
   }
 }
 @media (max-width: 991px) {
@@ -1396,6 +1448,68 @@ footer .footer-container ul:not(.social-media-footer) {
   .heading-border-left {
     margin-bottom: 2.5rem;
   }
+  .cta-testimonial {
+    padding: 1.5rem 1.5rem 2.5rem;
+    background-color: #E9222B;
+    width: 100%;
+    margin-top: 4.5rem;
+    flex-direction: column;
+  }
+  #jrp-contact-branches {
+    margin-left: 0;
+    margin-top: 2rem;
+    max-width: 100%;
+    padding: 2rem 2rem 1rem;
+  }
+  #jrp-contact-branches::before {
+    display: none;
+  }
+  .workshop-menu-list {
+    padding-right: 1rem;
+  }
+  .workshop-menu-list li a {
+    font-size: 16px;
+  }
+  .meet-the-ceo-section .flex-2-set {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.75rem;
+  }
+  .meet-the-ceo-details {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+  .meet-the-ceo-profile {
+    width: calc(65% - var(--gutter-x) * 0.5);
+  }
+  .meet-the-ceo-profile img {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+  }
+  .message-from-the-ceo-section .flex-2-set {
+    gap: 1.35rem;
+    flex-direction: column;
+  }
+  .message-from-the-ceo-details,
+  .message-from-the-ceo-map {
+    width: calc(100% - var(--gutter-x) * 0.5);
+    aspect-ratio: auto;
+  }
+  .message-from-the-ceo-details {
+    aspect-ratio: auto;
+    padding: 2rem;
+  }
+  .message-from-the-ceo-map h3 {
+    margin-top: 1.5rem;
+  }
+  .message-from-the-ceo-map img {
+    left: 0;
+    position: relative;
+    top: 0;
+    transform: none;
+    width: auto;
+  }
 }
 @media (max-width: 768px) {
   .aside-tab-menu {
@@ -1493,6 +1607,70 @@ footer .footer-container ul:not(.social-media-footer) {
   .english-learning-section {
     padding-top: 50px;
   }
+  .card-container .card .news-description {
+    padding: 1rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-container .card .news-description h5 {
+    margin-bottom: 0 !important;
+  }
+  .contact-us-hero-banner img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 175px;
+    -o-object-position: left;
+       object-position: left;
+  }
+  #contact-us-section {
+    padding-top: 45px;
+  }
+  #jrp-contact-branches {
+    padding: 1rem 1rem 0.5rem;
+  }
+  h3 {
+    font-size: 1.438rem;
+  }
+  .gallery {
+    flex-direction: column;
+  }
+  .tab-menu-container {
+    margin-top: 1rem;
+  }
+  .workshop-menu-list {
+    background-color: #E9222B;
+    padding: 1rem;
+    gap: 0.45rem 0.75rem;
+    display: none;
+    width: 98.5%;
+    margin: auto;
+  }
+  .workshop-menu-list li a {
+    color: #ffffff;
+  }
+  .workshop-menu-list li a.active-nav {
+    font-family: "avenirheavy";
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  .toggle-sidebar {
+    cursor: pointer;
+    background-color: #e9222b;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    color: #fff;
+    display: block;
+    font-family: "avenir_regularregular";
+    font-size: 1rem;
+    width: 98.5%;
+    margin: auto;
+  }
+  .testimonial-carousel-section .testimonial-content {
+    padding: 2rem;
+    margin: 0;
+  }
 }
 @media (max-width: 599px) {
   h3 {
@@ -1519,7 +1697,7 @@ footer .footer-container ul:not(.social-media-footer) {
     right: 0;
   }
   h2 {
-    font-size: 23px;
+    font-size: 23px !important;
     line-height: 1.34em;
   }
   .heading-border-left {
@@ -1553,5 +1731,31 @@ footer .footer-container ul:not(.social-media-footer) {
   }
   .img-shadow-black {
     padding-right: 20px;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .card-container .card img {
+    height: 170px;
+  }
+  .cta-testimonial {
+    padding: 1rem 1rem 2rem;
+    margin-top: 3.5rem;
+  }
+  .testimonial-carousel-section {
+    padding: 50px 0;
+  }
+  .testimonial-carousel-section .testimonial-content {
+    padding: 1.45rem;
+  }
+  .testimonial-carousel-section .testimonial-content h3 {
+    font-size: 18px;
+    line-height: 1.56em;
+  }
+  .testimonial-carousel-section .testimonial-content h5 {
+    font-size: 1rem;
+  }
+  .testimonial-carousel-section .testimonial-content img {
+    max-width: 50px;
   }
 }/*# sourceMappingURL=main.css.map */
