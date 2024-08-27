@@ -1327,37 +1327,61 @@ footer {
     display: block;
   }
   nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    flex-direction: column;
-    display: flex;
-    background-color: $text-red;
-    margin-top: 0;
-    display: none;
-    img {
-      filter: brightness(0) invert(1);
-    }
-    .container {
-      flex-direction: column;
-    }
-    .logo {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-    }
     ul {
+      display: none;
+    }
+  }
+  .toggle-nav {
+    cursor: pointer;
+  }
+  .nav-toggle {
+    overflow: hidden;
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
       flex-direction: column;
-      li {
-        a {
-          font-size: 21px;
-          font-family: $text-black;
-          color: $white-color;
+      display: flex;
+      background-color: $text-red;
+      margin-top: 0;
+      img {
+        filter: brightness(0) invert(1);
+      }
+      .container {
+        flex-direction: column;
+      }
+      .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          a {
+            font-size: 21px;
+            font-family: $text-black;
+            color: $white-color;
+          }
+          &:last-child {
+            a {
+              background-color: $white-color;
+              color: $text-red !important;
+              padding: 0.625rem 2.15rem;
+            }
+          }
         }
       }
+    }
+    .toggle-nav {
+      position: absolute;
+      top: 39px;
+      right: 30px;
+      filter: brightness(0) invert(1);
     }
   }
   .personality-program-section {
@@ -1525,6 +1549,12 @@ footer {
       top: 0;
       transform: none;
       width: auto;
+    }
+  }
+  #single-news-details {
+    #press-and-events-details {
+      padding-right: 0;
+      max-width: 100%;
     }
   }
 }
@@ -1715,6 +1745,9 @@ footer {
       margin: 0;
     }
   }
+  .card-press-and-events-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // small device
@@ -1804,5 +1837,20 @@ footer {
         max-width: 50px;
       }
     }
+  }
+  .card-press-and-events-list {
+    grid-template-columns: repeat(1, 1fr);
+    .press-and-events-desc {
+      padding: 1.2rem 1rem;
+      height: auto;
+    }
+    img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+  }
+  nav .logo img {
+    max-width: 177px;
   }
 }

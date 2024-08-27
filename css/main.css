@@ -1330,7 +1330,16 @@ footer .footer-container ul:not(.social-media-footer) {
   .is-mobile {
     display: block;
   }
-  nav {
+  nav ul {
+    display: none;
+  }
+  .toggle-nav {
+    cursor: pointer;
+  }
+  .nav-toggle {
+    overflow: hidden;
+  }
+  .nav-toggle nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -1341,26 +1350,37 @@ footer .footer-container ul:not(.social-media-footer) {
     display: flex;
     background-color: #E9222B;
     margin-top: 0;
-    display: none;
   }
-  nav img {
+  .nav-toggle nav img {
     filter: brightness(0) invert(1);
   }
-  nav .container {
+  .nav-toggle nav .container {
     flex-direction: column;
   }
-  nav .logo {
+  .nav-toggle nav .logo {
     position: absolute;
     top: 30px;
     left: 30px;
   }
-  nav ul {
+  .nav-toggle nav ul {
+    display: flex;
     flex-direction: column;
   }
-  nav ul li a {
+  .nav-toggle nav ul li a {
     font-size: 21px;
     font-family: "avenirblack";
     color: #ffffff;
+  }
+  .nav-toggle nav ul li:last-child a {
+    background-color: #ffffff;
+    color: #E9222B !important;
+    padding: 0.625rem 2.15rem;
+  }
+  .nav-toggle .toggle-nav {
+    position: absolute;
+    top: 39px;
+    right: 30px;
+    filter: brightness(0) invert(1);
   }
   .personality-program-section {
     padding-top: 0;
@@ -1509,6 +1529,10 @@ footer .footer-container ul:not(.social-media-footer) {
     top: 0;
     transform: none;
     width: auto;
+  }
+  #single-news-details #press-and-events-details {
+    padding-right: 0;
+    max-width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -1671,6 +1695,9 @@ footer .footer-container ul:not(.social-media-footer) {
     padding: 2rem;
     margin: 0;
   }
+  .card-press-and-events-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 599px) {
   h3 {
@@ -1757,5 +1784,21 @@ footer .footer-container ul:not(.social-media-footer) {
   }
   .testimonial-carousel-section .testimonial-content img {
     max-width: 50px;
+  }
+  .card-press-and-events-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-press-and-events-list .press-and-events-desc {
+    padding: 1.2rem 1rem;
+    height: auto;
+  }
+  .card-press-and-events-list img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  nav .logo img {
+    max-width: 177px;
   }
 }/*# sourceMappingURL=main.css.map */

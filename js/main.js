@@ -171,9 +171,9 @@ $(document).ready(function () {
   const totalImages = images.length;
 
   function showNextImage() {
-    images.eq(currentImageIndex).fadeOut(500, function() {
+    images.eq(currentImageIndex).fadeOut(350, function() {
       currentImageIndex = (currentImageIndex + 1) % totalImages;
-      images.eq(currentImageIndex).fadeIn(500);
+      images.eq(currentImageIndex).fadeIn(350);
     });
   }
 
@@ -201,6 +201,10 @@ $(document).ready(function () {
       $('.workshop-menu-list').slideUp('fast');
       $(this).text('Show Navigation');
     }
+  });
+  
+  $('.toggle-nav').click(function() {
+    $('body').toggleClass('nav-toggle');
   });
 });
 
